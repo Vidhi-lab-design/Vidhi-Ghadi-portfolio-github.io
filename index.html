@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        /* Basic reset and styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #4E342E; /* Dark Brown */
+            background-color: #FFF5E1; /* Cream */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header {
+            padding: 30px 0;
+            background: #FAD6D6; /* Soft Peach */
+            color: #4E342E; /* Dark Brown */
+        }
+        .profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 300px; /* Increased size */
+            height: 300px; /* Increased size */
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .profile h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #4E342E; /* Dark Brown */
+        }
+        .profile p {
+            font-size: 1.1em;
+            color: #4E342E; /* Dark Brown */
+            max-width: 600px;
+            margin: 20px 0 0 0; /* Added margin-top to create space */
+            text-align: left; /* Left alignment */
+        }
+        .links {
+            margin: 30px 0;
+        }
+        .links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #800020; /* Burgundy */
+            font-size: 1.2em;
+            border: 2px solid #800020; /* Burgundy */
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .links a:hover {
+            background-color: #800020; /* Burgundy */
+            color: #FFF5E1; /* Cream */
+        }
+        .experience, .skills, .contact {
+            margin: 50px 0;
+            background: #FFF5E1; /* Cream */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .experience h2, .skills h2, .contact h2 {
+            color: #800020; /* Burgundy */
+        }
+        .experience-list, .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        .experience-list li, .skills-list li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact a {
+            margin: 0 10px;
+            display: inline-block;
+            color: #4E342E; /* Dark Brown */
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        .contact a img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .contact a:hover img {
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container profile">
+            <img src="image.jpg" alt="Your Photo">
+            <div>
+                <h1>Vidhi Ghadi</h1>
+                <p>Hi there, Vidhi Ghadi, an M.Sc. Economics (Data Analytics), is a fearless speaker with good soft and analytical skills. With experience in content writing, business development, and administrative roles, she is passionate about leveraging data for insights and is committed to continuous learning.</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1wq-_rd9bxAPZN1juUETCABypL3GF7crX/view?usp=drive_link" target="_blank">Resume</a>
+            <a href="projects-link" target="_blank">Projects</a>
+        </div>
+        
+        <div class="experience">
+            <h2>Internships</h2>
+            <ul class="experience-list">
+                <li>Administration and Operations Intern at Maharashtra Economic Development Council</li>
+                <li>Content Writer and Social Media Head Intern - Healing Anonmously</li>
+                <li>Business Development Intern - UnSchool</li>
+            </ul>
+        </div>
+        
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Data Analysis, Excel, Tableau, Python, R</li>
+                <li>Content Writing, Presentation, Public Speaking</li>
+                <li>Business Development</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+            </ul>
+        </div>
+        
+        <div class="contact">
+            <h2>Contact</h2>
+            <a href="mailto:ghadividhi79@gmail.com">
+                <img src="https://img.icons8.com/ios/50/000000/gmail.png" alt="Gmail Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">
+                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/vidhuarca/" target="_blank">
+                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram Icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
