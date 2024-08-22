@@ -3,170 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Vidhi Ghadi - Portfolio</title>
     <style>
-        /* Basic reset and styling */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            color: #4E342E; /* Dark Brown */
-            background-color: #FFF5E1; /* Cream */
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            text-align: center;
+            background-color: #f4f4f4;
         }
         header {
-            padding: 30px 0;
-            background: #FAD6D6; /* Soft Peach */
-            color: #4E342E; /* Dark Brown */
-        }
-        .profile {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
-            background: #FFF5E1; /* Cream */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
         }
-        .profile img {
+        header img {
             border-radius: 50%;
-            width: 150px; /* Reduced size */
-            height: 150px; /* Reduced size */
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        .profile h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #4E342E; /* Dark Brown */
-            font-style: italic; /* Italic style */
+        header h1 {
+            margin-top: 180px; /* Adjust margin to accommodate image */
         }
-        .profile p {
-            font-size: 1.1em;
-            color: #4E342E; /* Dark Brown */
-            max-width: 600px;
-            margin: 20px 0 0 0; /* Added margin-top to create space */
-            text-align: left; /* Left alignment */
-            font-family: Arial, sans-serif; /* Arial font */
-            font-style: italic; /* Italic style */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
         }
-        .links {
-            margin: 30px 0;
-        }
-        .links a {
-            margin: 0 15px;
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
             text-decoration: none;
-            color: #800020; /* Burgundy */
-            font-size: 1.2em;
-            border: 2px solid #800020; /* Burgundy */
-            border-radius: 5px;
-            padding: 10px 20px;
-            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
         }
-        .links a:hover {
-            background-color: #800020; /* Burgundy */
-            color: #FFF5E1; /* Cream */
+        nav a:hover {
+            background-color: #555;
         }
-        .experience, .skills, .contact {
-            margin: 50px 0;
-            background: #FFF5E1; /* Cream */
+        section {
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .experience h2, .skills h2, .contact h2 {
-            color: #800020; /* Burgundy */
-            font-style: italic; /* Italic style */
+        #bio, #qualifications, #internships, #skills, #projects {
+            margin-top: 20px;
         }
-        .experience-list, .skills-list {
-            list-style: none;
-            padding: 0;
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
         }
-        .experience-list li, .skills-list li {
-            margin: 10px 0;
-            font-size: 1.1em;
-            border: 1px solid #4E342E; /* Dark Brown border */
-            border-radius: 5px;
-            padding: 10px;
-            background: #FFF5E1; /* Cream */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .contact a {
+        .social-icons a {
             margin: 0 10px;
-            display: inline-block;
-            color: #4E342E; /* Dark Brown */
-            font-size: 1.5em;
             text-decoration: none;
-        }
-        .contact a img {
-            width: 40px;
-            height: 40px;
-            vertical-align: middle;
-        }
-        .contact a:hover img {
-            filter: brightness(0.8);
+            font-size: 24px;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container profile">
-            <img src="image.jpg" alt="Your Photo">
-            <div>
-                <h1>Vidhi Ghadi</h1>
-                <p>Hi there, Vidhi Ghadi, an M.Sc. Economics (Data Analytics), is a fearless speaker with good soft and analytical skills. Vidhi Ghadi is a dedicated M.Sc. Economics (Data Analytics) professional with a strong background in data analytical tools and techniques to drive strategic decisions. Her experience spans across roles in administration content writing, social media management, and business development, demonstrating her versatility and commitment to leveraging data for impactful results. I am well driven by continuous learning and aims to bring innovative solutions to every challenge she encounters.</p>
-            </div>
-        </div>
+        <img src="self.jpg" alt="Vidhi Ghadi">
+        <h1>Vidhi Ghadi</h1>
+        <p>MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics. Proficient in data exploration, visualization, and strategic planning. A quick learner from scratch with strengths in critical thinking, problem-solving, and data-driven storytelling. Experienced in leadership, team management, and effective communication. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
     </header>
-    
-    <div class="container">
-        <div class="links">
-            <a href="https://drive.google.com/file/d/18q1qYVtthlX8X_yvhyd1lfHWNwibJVGu/view?usp=drive_link" target="_blank">Resume</a>
-            <a href="projects-link" target="_blank">Projects</a>
-        </div>
-        
-        <div class="experience">
-            <h2>Internships</h2>
-            <ul class="experience-list">
-                <li>Administration and Operations Intern at Maharashtra Economic Development Council</li>
-                <li>Content Writer and Social Media Head Intern - Healing Anonmously</li>
-                <li>Business Development Intern - UnSchool</li>
-            </ul>
-        </div>
-        
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Data Analysis, Excel, Tableau, Python, R</li>
-                <li>Content Writing, Presentation, Public Speaking</li>
-                <li>Business Development</li>
-                <li>Problem Solving</li>
-                <li>Team Collaboration</li>
-            </ul>
-        </div>
-        
-        <div class="contact">
-            <h2>Contact</h2>
-            <a href="mailto:ghadividhi79@gmail.com">
-                <img src="https://img.icons8.com/ios/50/000000/gmail.png" alt="Gmail Icon">
-            </a>
-            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">
-                <img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="LinkedIn Icon">
-            </a>
-            <a href="https://www.instagram.com/vidhuarca/" target="_blank">
-                <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="Instagram Icon">
-            </a>
-        </div>
-    </div>
 
-    <!-- FontAwesome for icons -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <nav>
+        <a href="#bio">Home</a>
+        <a href="#resume">Resume</a>
+        <a href="#qualifications">Qualifications</a>
+        <a href="#internships">Internships</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><a href="https://drive.google.com/file/d/18q1qYVtthlX8X_yvhyd1lfHWNwibJVGu/view?usp=drive_link" target="_blank">Download Resume</a></p>
+    </section>
+
+    <section id="qualifications">
+        <h2>Qualifications</h2>
+        <p>Masters- Post Graduation
+           M.Sc. Economics (Data Analytics)       expected 2025
+           Symbiosis School of Economics
+           Symbiosis International University, Pune
+           
+           Graduation 
+           B.A. in Economics 2023
+           Wilson College, Mumbai
+           Concentration in Economics & Quantitative
+           with a Minor in English literature & Psychology; graduated with 9.01 CGPA.</p>
+    </section>
+
+    <section id="internships">
+        <h2>Internships</h2>
+        <p>1. Maharashtra Economic Development Council, Mumbai             December 2022 to January 2023
+              Role :- Administrations and Operations Executive Intern
+              ● Manage office tasks daily, including meeting minutes and website management.
+              ● Connecting with institutes, interactions with accounts and research departments.
+           2. Healing Anonymously, Jaipur (Remote)                 May 2021 to October 2021
+              Role :- Content Writer and Social Media
+              ● Jaipur-based work-from-home work experience for writing weekly blogs
+                on mental health development on the company's official website.
+              ● Led a team of 6 members to update content on social media
+           3. UnSchool, Hyderabad (Remote)                    December 2020 to January 2021
+              Role :- Business Development Intern
+             ● Online Internship to hire individuals and sell the academic courses offered by company.
+            ● Led a team of five members.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Here's a list of skills from the paragraph:
+
+1. Data Analytics
+2. Microsoft Excel
+3. Tableau
+4. Econometrics
+5. Data Exploration
+6. Data Visualization
+7. Strategic Planning
+8. Critical Thinking
+9. Problem-Solving
+10. Data-Driven Storytelling
+11. Leadership
+12. Team Management
+13. Effective Communication
+14. Multilingual Proficiency (English, Hindi, Gujarati, Marathi, Basic Spanish).</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>List of your projects goes here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vidhi-ghadi-7b1471251/" target="_blank">LinkedIn</a>
+            <a href="mailto:ghadividhi79@gmail.com" target="_blank">Gmail</a>
+            <a href="https://www.instagram.com/vidhuarca/" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
