@@ -10,241 +10,144 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            background: #d1c4b7; /* Darker beige background */
-            color: #3b332a; /* Dark brown color for text */
-        }
-
-        /* Navbar */
-        .navbar {
-            background: linear-gradient(135deg, #b8a694, #d1c4b7); /* Darker beige gradient */
-            border-radius: 0 0 20px 20px;
-            padding: 0.5rem 1rem;
-        }
-
-        .navbar-nav .nav-link {
-            color: #3b332a !important;
-            margin-right: 20px;
-            font-size: 1.1rem;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #9c8568 !important; /* Dark brown hover color */
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            color: #3b332a !important;
+            background: #1e1e1e; /* Dark background */
+            color: #ffffff;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #d1c4b7, #b0a189); /* Darker gradient */
-            color: #3b332a;
-            padding: 60px 0;
             text-align: center;
-        }
-
-        header .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            animation: fadeIn 1s ease-out;
-        }
-
-        header img {
-            border-radius: 50%;
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border: 5px solid #b8a694;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-left: 20px;
-            margin-right: 40px;
+            padding: 100px 0;
+            background-color: #333333;
+            color: #fff;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 600;
             margin-bottom: 10px;
-            color: #9c8568; /* Darker brown */
         }
 
         header p {
-            font-size: 1.25rem;
-            max-width: 600px;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        /* Container for all sections */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 50px 0;
         }
 
-        /* Sections */
-        section {
-            padding: 60px 0;
-            background-color: #e0d6cc; /* Dark beige */
+        /* Grid Layout for Sections */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-item {
+            background-color: #2b2b2b; /* Dark grey */
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            margin-bottom: 30px;
-        }
-
-        section:nth-child(even) {
-            background-color: #d1c4b7;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: #9c8568; /* Darker brown */
-            margin-bottom: 30px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        section p {
-            color: #3b332a;
-            line-height: 1.6;
-            text-align: center;
+        .grid-item h2 {
+            font-size: 1.75rem;
+            margin-bottom: 15px;
+            color: #ffab61; /* Accent color */
         }
 
-        /* Internship Section: Vertical Rectangles */
-        .internship-card {
-            background-color: #b8a694; /* Dark taupe */
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 30%;
-            display: inline-block;
-            vertical-align: top;
+        .grid-item p {
+            font-size: 1.1rem;
+            color: #d1d1d1;
         }
 
         /* Skills Section: Oval Shapes */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
         .skill {
-            display: inline-block;
-            background-color: #e0d6cc;
-            color: #3b332a;
-            border: 2px solid #9c8568;
+            background-color: #444444;
             padding: 10px 20px;
-            margin: 10px;
             border-radius: 50px;
             font-size: 1rem;
-            text-align: center;
+            color: #ffab61;
             font-weight: 600;
+            text-align: center;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #b8a694, #d1c4b7);
-            color: #3b332a;
             text-align: center;
-            padding: 20px 0;
-            border-radius: 20px 20px 0 0;
-            margin-top: 30px;
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            font-size: 1.5rem;
-            color: #3b332a;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: #9c8568;
-        }
-
-        /* Graduation cap icon for Qualifications */
-        .graduation-icon {
-            width: 40px;
-            margin-right: 10px;
-            vertical-align: middle;
+            padding: 30px 0;
+            background-color: #333333;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://drive.google.com/file/d/18q1qYVtthlX8X_yvhyd1lfHWNwibJVGu/view?usp=drive_link"
-                            target="_blank">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#qualifications">Qualifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#internship">Internship</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="self.jpg" alt="Your Photo">
-                <div>
-                    <h1>Vidhi Ghadi</h1>
-                    <p>MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics...</p>
-                </div>
-            </div>
-        </div>
+        <h1>Vidhi Ghadi</h1>
+        <p>Economics & Data Analytics | Strategic Problem Solver</p>
     </header>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Dissertation</p>
+    <!-- About, Skills, Education, Experience Sections -->
+    <div class="container">
+        <div class="grid-container">
+            <!-- About Section -->
+            <div class="grid-item">
+                <h2>About Me</h2>
+                <p>MSc Economics student specializing in Data Analytics, proficient in data exploration, visualization, and strategic planning. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="grid-item">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">Data Analytics</div>
+                    <div class="skill">MS Excel</div>
+                    <div class="skill">Tableau</div>
+                    <div class="skill">QGIS</div>
+                    <div class="skill">Strategic Planning</div>
+                    <div class="skill">Problem Solving</div>
+                    <div class="skill">Leadership</div>
+                    <div class="skill">Team Management</div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="grid-item">
+                <h2>Education</h2>
+                <p>MSc Economics (Data Analytics) - Symbiosis School of Economics</p>
+                <p>BA Economics - Wilson College, Mumbai</p>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="grid-item">
+                <h2>Experience</h2>
+                <p><strong>Maharashtra Economic Development Council</strong> <br>Administration and Operations Intern</p>
+                <p><strong>Healing Anonymously</strong> <br>Content Writer and Social Media</p>
+                <p><strong>UnSchool</strong> <br>Business Development Intern</p>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Qualifications Section -->
-    <section id="qualifications">
-        <div class="container">
-            <h2><img src="https://img.icons8.com/ios/50/000000/graduation-cap--v2.png" class="graduation-icon" alt="Graduation Cap Icon">Qualifications</h2>
-            <p><strong>Masters- Post Graduation</strong><br>
-                M.Sc. Economics (Data Analytics) expected 2025<br>
-                Symbiosis School of Economics<br>
-                Symbiosis International University, Pune<br><br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vidhi Ghadi. All Rights Reserved.</p>
+    </footer>
+</body>
 
-                <strong>Graduation</strong><br>
-                B.A. in Economics 2023<br>
-                Wilson College, Mumbai<br>
-                graduated with 9.01 CGPA.
-            </p>
-        </div>
-    </section>
+</html>
 
-    <!-- Internship Section -->
-    <section id="internship">
-        <div class="container">
-            <h2>Internship</h2>
-            <div class="internship-card">
-                <strong>1. Maharashtra Economic Development Council</strong> (Dec 2022 - Jan 2023)<br>
-                <em>Role:</em> Administration and Operations Executive Intern
-            </div>
-            <div class="internship-card">
-                <strong>2. Healing Anonymously</strong> (May 2021 - Oct 2021)<br>
-                <em>Role:</em> Content Writer and Social Media
-            </div>
-            <div class="internship-card">
-                <strong>3. UnSchool</strong> (Dec 2020 - Jan 2021)<br>
-                <em>Role:</em> Business Development Intern
-            </div>
-       
