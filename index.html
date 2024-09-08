@@ -130,6 +130,60 @@
             background-color: #2d2d2d;
             margin: 20px 0;
         }
+
+        /* Qualification Section */
+        .qualifications-section {
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f5f2;
+        }
+
+        .qualifications-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2d2d2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qualifications-section h2 img {
+            margin-right: 10px;
+        }
+
+        .qualification-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .qualification-card img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .qualification-card .details {
+            text-align: left;
+        }
+
+        .qualification-card .details h3 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+
+        .qualification-card .details p {
+            font-size: 16px;
+            color: #333;
+        }
+
     </style>
 </head>
 <body>
@@ -146,6 +200,7 @@
     </nav>
 </header>
 
+<!-- Main section: Hi, I'm Vidhi Ghadi -->
 <div class="main-content">
     <div class="text-section">
         <h2>Hi, <br> I'm Vidhi Ghadi</h2>
@@ -158,6 +213,32 @@
         <div class="circle circle-1"></div>
         <div class="circle circle-2"></div>
         <div class="circle circle-3"></div>
+    </div>
+</div>
+
+<!-- Qualifications Section -->
+<div class="qualifications-section">
+    <h2>
+        <img src="graduation-cap.png" alt="Graduation Cap" width="50"> 
+        Qualifications
+    </h2>
+    
+    <!-- First Qualification Card -->
+    <div class="qualification-card">
+        <img src="symbiosis-logo.png" alt="Symbiosis Logo">
+        <div class="details">
+            <h3>M.Sc. Economics (Data Analytics)</h3>
+            <p>Symbiosis School of Economics 2023-25<br>Symbiosis International University, Pune.</p>
+        </div>
+    </div>
+
+    <!-- Second Qualification Card -->
+    <div class="qualification-card">
+        <img src="wilson-logo.png" alt="Wilson College Logo">
+        <div class="details">
+            <h3>B.A. in Economics</h3>
+            <p>Wilson College, Mumbai 2020-2023<br>Major in Economics & Quantitative<br>Minor in English Literature & Psychology</p>
+        </div>
     </div>
 </div>
 
