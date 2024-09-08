@@ -1,153 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Vidhi Ghadi - Portfolio</title>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
-            background: #1e1e1e; /* Dark background */
-            color: #ffffff;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            padding: 100px 0;
-            background-color: #333333;
-            color: #fff;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.5rem;
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-
-        /* Container for all sections */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 0;
-        }
-
-        /* Grid Layout for Sections */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .grid-item {
-            background-color: #2b2b2b; /* Dark grey */
-            padding: 30px;
-            border-radius: 10px;
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
-        .grid-item h2 {
-            font-size: 1.75rem;
-            margin-bottom: 15px;
-            color: #ffab61; /* Accent color */
-        }
-
-        .grid-item p {
-            font-size: 1.1rem;
-            color: #d1d1d1;
-        }
-
-        /* Skills Section: Oval Shapes */
-        .skills-container {
+        nav {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            background-color: #333;
         }
-
-        .skill {
-            background-color: #444444;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
-            color: #ffab61;
-            font-weight: 600;
-            text-align: center;
+        nav a {
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            background-color: #333333;
-            color: #fff;
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-
 <body>
-    <!-- Header -->
     <header>
-        <h1>Vidhi Ghadi</h1>
-        <p>Economics & Data Analytics | Strategic Problem Solver</p>
+        <h1>Vidhi Ghadi - Data Analyst Portfolio</h1>
     </header>
 
-    <!-- About, Skills, Education, Experience Sections -->
-    <div class="container">
-        <div class="grid-container">
-            <!-- About Section -->
-            <div class="grid-item">
-                <h2>About Me</h2>
-                <p>MSc Economics student specializing in Data Analytics, proficient in data exploration, visualization, and strategic planning. Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.</p>
-            </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#qualifications">Qualifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#internships">Internships</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <!-- Skills Section -->
-            <div class="grid-item">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skill">Data Analytics</div>
-                    <div class="skill">MS Excel</div>
-                    <div class="skill">Tableau</div>
-                    <div class="skill">QGIS</div>
-                    <div class="skill">Strategic Planning</div>
-                    <div class="skill">Problem Solving</div>
-                    <div class="skill">Leadership</div>
-                    <div class="skill">Team Management</div>
-                </div>
-            </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            MSc (Economics) in Data Analytics with experience in Excel, Python, Big Data. Proficient in data exploration, visualization, and strategic planning. 
+            A quick learner with strengths in critical thinking, problem-solving, leadership, and team management. 
+            Passionate about leveraging data insights to drive business solutions and enhance decision-making processes.
+        </p>
+    </section>
 
-            <!-- Education Section -->
-            <div class="grid-item">
-                <h2>Education</h2>
-                <p>MSc Economics (Data Analytics) - Symbiosis School of Economics</p>
-                <p>BA Economics - Wilson College, Mumbai</p>
-            </div>
+    <section id="qualifications">
+        <h2>Qualifications</h2>
+        <ul>
+            <li>M.Sc. Economics (Data Analytics), Symbiosis School of Economics (2023-2025)</li>
+            <li>B.A. in Economics, Wilson College, Mumbai (2020-2023)</li>
+            <ul>
+                <li>Major in Economics & Quantitative Techniques</li>
+                <li>Minor in English Literature & Psychology</li>
+            </ul>
+        </ul>
+    </section>
 
-            <!-- Experience Section -->
-            <div class="grid-item">
-                <h2>Experience</h2>
-                <p><strong>Maharashtra Economic Development Council</strong> <br>Administration and Operations Intern</p>
-                <p><strong>Healing Anonymously</strong> <br>Content Writer and Social Media</p>
-                <p><strong>UnSchool</strong> <br>Business Development Intern</p>
-            </div>
-        </div>
-    </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>
+            - Worked on Dissertation and data analytics projects at the graduate level.
+        </p>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Vidhi Ghadi. All Rights Reserved.</p>
-    </footer>
+    <section id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li><strong>Healing Anonymously, Jaipur (Online)</strong> - Content Writer and Social Media Intern (May 2021 - October 2021)</li>
+            <li><strong>Maharashtra Economic Development Council, Mumbai</strong> - Administrations and Operations Executive Intern (December 2022 - January 2023)</li>
+            <li><strong>Un School, Hyderabad (Online)</strong> - Business Development Intern (December 2020 - January 2021)</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: vidhighadi@example.com</p>
+    </section>
 </body>
-
 </html>
-
