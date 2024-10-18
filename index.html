@@ -4,91 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidhi Ghadi - Portfolio</title>
-    
-    <!-- Tailwind CSS for Modern Design -->
+    <title>Vidhi Ghadi - Tech Portfolio</title>
+
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        /* Custom Styles */
+        /* Root Variables for easy theming */
         :root {
-            --primary-color: #2d2d2d;
-            --accent-color: #4CAF50;
-            --background-color: #f8f5f2;
-            --card-bg: #e0e0e0;
-            --font-family: 'Poppins', sans-serif;
+            --bg-color: #0d0d0d;
+            --primary-color: #00c6ff;
+            --secondary-color: #e9e9e9;
+            --accent-color: #ff007f;
+            --card-bg: #1a1a1a;
+            --font-family: 'Roboto', sans-serif;
         }
 
         body {
             font-family: var(--font-family);
-            background-color: var(--background-color);
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
         }
 
         header {
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #121212;
             position: fixed;
             width: 100%;
             z-index: 1000;
+            padding: 1rem;
         }
 
-        nav a {
+        header nav a {
+            color: var(--secondary-color);
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
-        .main-content h2 {
-            font-size: 3rem;
+        header nav a:hover {
             color: var(--primary-color);
         }
 
+        .main-content {
+            padding-top: 100px;
+            color: var(--secondary-color);
+        }
+
+        .neon-text {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+        }
+
         .btn-custom {
-            background-color: var(--primary-color);
-            transition: background-color 0.3s ease;
+            background: var(--accent-color);
+            padding: 10px 20px;
+            color: var(--bg-color);
+            border-radius: 4px;
+            transition: background 0.3s ease;
         }
 
         .btn-custom:hover {
-            background-color: var(--accent-color);
+            background: var(--primary-color);
         }
 
         .project-box {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: var(--card-bg);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 198, 255, 0.3);
         }
 
-        .circle {
-            animation: bounce 4s infinite alternate;
+        .image-section img {
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--accent-color);
         }
 
-        @keyframes bounce {
+        /* Glow Animation */
+        @keyframes glow {
             0% {
-                transform: translateY(0);
+                box-shadow: 0 0 5px var(--primary-color);
+            }
+            50% {
+                box-shadow: 0 0 20px var(--primary-color);
             }
             100% {
-                transform: translateY(-10px);
+                box-shadow: 0 0 5px var(--primary-color);
             }
+        }
+
+        .glow {
+            animation: glow 1.5s infinite;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .text-section h2 {
-                font-size: 2rem;
-            }
-
             .main-content {
-                flex-direction: column;
                 text-align: center;
-            }
-
-            nav a {
-                font-size: 0.875rem;
             }
         }
     </style>
@@ -97,120 +112,102 @@
 <body>
 
     <!-- Header -->
-    <header class="py-4 px-8 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Vidhi Ghadi</h1>
+    <header class="flex justify-between items-center px-8 py-4">
+        <h1 class="text-2xl font-bold neon-text">Vidhi Ghadi</h1>
         <nav class="space-x-6">
-            <a href="#home" class="text-gray-700 hover:text-accent">Home</a>
-            <a href="#qualifications" class="text-gray-700 hover:text-accent">Qualifications</a>
-            <a href="#projects" class="text-gray-700 hover:text-accent">Projects</a>
-            <a href="#internships" class="text-gray-700 hover:text-accent">Internships</a>
-            <a href="#skills" class="text-gray-700 hover:text-accent">Skills</a>
-            <a href="#contact" class="text-gray-700 hover:text-accent">Contact</a>
+            <a href="#home" class="hover:text-primary-color">Home</a>
+            <a href="#qualifications" class="hover:text-primary-color">Qualifications</a>
+            <a href="#projects" class="hover:text-primary-color">Projects</a>
+            <a href="#internships" class="hover:text-primary-color">Internships</a>
+            <a href="#skills" class="hover:text-primary-color">Skills</a>
+            <a href="#contact" class="hover:text-primary-color">Contact</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <section id="home" class="main-content pt-24 pb-16 flex items-center justify-center px-8">
+    <!-- Main Section -->
+    <section id="home" class="main-content flex justify-center items-center px-8 py-20 min-h-screen">
         <div class="text-section max-w-md">
-            <h2 class="font-bold">Hi, <br> I'm Vidhi Ghadi</h2>
-            <p class="mt-4 text-gray-600">MSc Economics student specializing in Data Analytics, with advanced skills in Excel, Tableau, and econometrics. Experienced in leadership, team management, and effective communication.</p>
-            <a href="https://drive.google.com/file/d/1Gk75anqtk1tHbPTop0oCwXIkahSUCct8/view?usp=drive_link" target="_blank" class="btn-custom text-white px-6 py-2 rounded-full mt-6">Resume</a>
+            <h2 class="text-4xl font-bold neon-text">Hi, <br> I'm Vidhi Ghadi</h2>
+            <p class="mt-4 text-secondary">MSc Economics student with expertise in Data Analytics, specializing in Excel, Tableau, and econometrics. Experienced in leadership and technical communication.</p>
+            <a href="https://drive.google.com/file/d/1Gk75anqtk1tHbPTop0oCwXIkahSUCct8/view?usp=drive_link" target="_blank" class="btn-custom mt-6">View Resume</a>
         </div>
-        <div class="image-section relative">
-            <img src="self.jpg" alt="Vidhi Ghadi" class="rounded-full w-60 h-60 object-cover shadow-lg">
-            <div class="circle circle-1 absolute w-6 h-6 bg-black bottom-4 left-2 rounded-full"></div>
-            <div class="circle circle-2 absolute w-16 h-16 bg-black top-0 right-0 rounded-full"></div>
-            <div class="circle circle-3 absolute w-10 h-10 bg-black top-48 right-4 rounded-full"></div>
+        <div class="image-section ml-12">
+            <img src="self.jpg" alt="Vidhi Ghadi" class="w-60 h-60 glow">
         </div>
     </section>
 
     <!-- Qualifications Section -->
-    <section id="qualifications" class="section bg-gray-100 py-12">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-8">Qualifications</h2>
-            <div class="flex justify-center space-x-8">
-                <div class="qualification-box bg-white shadow-lg p-6 rounded-lg">
-                    <img src="https://img.icons8.com/ios/50/000000/university.png" alt="University Logo" class="mx-auto mb-4">
-                    <h5 class="text-xl font-semibold">M.Sc. Economics (Data Analytics)</h5>
-                    <p class="text-gray-600">Symbiosis School of Economics<br>2023-25</p>
-                </div>
-                <div class="qualification-box bg-white shadow-lg p-6 rounded-lg">
-                    <img src="https://img.icons8.com/ios/50/000000/university.png" alt="University Logo" class="mx-auto mb-4">
-                    <h5 class="text-xl font-semibold">B.A. in Economics</h5>
-                    <p class="text-gray-600">Wilson College, Mumbai<br>2020-2023</p>
-                </div>
+    <section id="qualifications" class="py-16 bg-black text-center">
+        <h2 class="text-3xl font-bold mb-8 neon-text">Qualifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto max-w-4xl">
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-xl font-semibold">M.Sc. Economics (Data Analytics)</h5>
+                <p>Symbiosis School of Economics<br>2023-25</p>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-xl font-semibold">B.A. in Economics</h5>
+                <p>Wilson College, Mumbai<br>2020-2023</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Project 1: Cybercrime and Phishing Attacks -->
-                <div class="project-box bg-card-bg p-6 rounded-lg text-center">
-                    <h4 class="text-lg font-semibold">Dissertation: Cybercrime Phishing Attacks Prediction</h4>
-                </div>
-
-                <!-- Project 2: Real Estate Factor Choice in Mumbai -->
-                <div class="project-box bg-card-bg p-6 rounded-lg text-center">
-                    <h4 class="text-lg font-semibold">Real Estate Analysis using Python in Mumbai</h4>
-                </div>
-
-                <!-- Project 3: Tourism Trends with Apache Spark -->
-                <div class="project-box bg-card-bg p-6 rounded-lg text-center">
-                    <h4 class="text-lg font-semibold">Tourism Trends Analysis with Apache Spark</h4>
-                </div>
+    <section id="projects" class="py-16 text-center">
+        <h2 class="text-3xl font-bold neon-text mb-12">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto max-w-6xl">
+            <div class="project-box p-6 rounded-lg text-center hover:shadow-lg">
+                <h4 class="text-xl font-semibold text-secondary">Phishing Attacks Prediction</h4>
+            </div>
+            <div class="project-box p-6 rounded-lg text-center hover:shadow-lg">
+                <h4 class="text-xl font-semibold text-secondary">Real Estate Analysis in Mumbai</h4>
+            </div>
+            <div class="project-box p-6 rounded-lg text-center hover:shadow-lg">
+                <h4 class="text-xl font-semibold text-secondary">Tourism Trends Analysis</h4>
             </div>
         </div>
     </section>
 
     <!-- Internships Section -->
-    <section id="internships" class="section bg-gray-100 py-12">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-8">Internships</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="internship-box bg-white shadow-lg p-6 rounded-lg text-center">
-                    <h5 class="text-xl font-semibold">Maharashtra Economic Development Council</h5>
-                    <p class="text-gray-600">Role: Administration and Operations Executive Intern</p>
-                </div>
-                <div class="internship-box bg-white shadow-lg p-6 rounded-lg text-center">
-                    <h5 class="text-xl font-semibold">Healing Anonymously</h5>
-                    <p class="text-gray-600">Role: Content Writer and Social Media Intern</p>
-                </div>
-                <div class="internship-box bg-white shadow-lg p-6 rounded-lg text-center">
-                    <h5 class="text-xl font-semibold">Un School</h5>
-                    <p class="text-gray-600">Role: Business Development Intern</p>
-                </div>
+    <section id="internships" class="py-16 bg-black text-center">
+        <h2 class="text-3xl font-bold mb-8 neon-text">Internships</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto max-w-6xl">
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-xl font-semibold">Maharashtra Economic Development Council</h5>
+                <p>Role: Administration and Operations Intern</p>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-xl font-semibold">Healing Anonymously</h5>
+                <p>Role: Content Writer and Social Media Intern</p>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-xl font-semibold">Un School</h5>
+                <p>Role: Business Development Intern</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="skill-box bg-white shadow-lg p-6 rounded-lg">
-                    <h5 class="text-lg font-semibold">Excel</h5>
-                </div>
-                <div class="skill-box bg-white shadow-lg p-6 rounded-lg">
-                    <h5 class="text-lg font-semibold">Tableau</h5>
-                </div>
-                <div class="skill-box bg-white shadow-lg p-6 rounded-lg">
-                    <h5 class="text-lg font-semibold">Python</h5>
-                </div>
-                <div class="skill-box bg-white shadow-lg p-6 rounded-lg">
-                    <h5 class="text-lg font-semibold">R Programming</h5>
-                </div>
+    <section id="skills" class="py-16 text-center">
+        <h2 class="text-3xl font-bold neon-text mb-12">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mx-auto max-w-6xl">
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-lg font-semibold">Excel</h5>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-lg font-semibold">Tableau</h5>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-lg font-semibold">Python</h5>
+            </div>
+            <div class="bg-card-bg p-6 rounded-lg shadow-lg">
+                <h5 class="text-lg font-semibold">R Programming</h5>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact" class="bg-primary py-8 text-center text-white">
-        <h4 class="text-lg font-bold">Contact Me</h4>
+    <footer id="contact" class="py-8 bg-card-bg text-center">
+        <h4 class="text-lg font-bold neon-text">Contact Me</h4>
         <p>Email: vidhighadi2002@gmail.com</p>
         <p>Phone: +91-8291712519</p>
     </footer>
